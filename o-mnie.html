@@ -1,0 +1,10 @@
+
+function sendEmail(){
+window.location.href="mailto:pizzaigas1@gmail.com";
+}
+
+function copyText(id){
+const text=document.getElementById(id).innerText;
+navigator.clipboard.writeText(text);
+alert("Skopiowano!");
+}

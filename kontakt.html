@@ -1,0 +1,19 @@
+
+async function loadOpinie(){
+const res = await fetch('opinie/opinie.json');
+const data = await res.json();
+const slider = document.getElementById("opinie-slider");
+
+data.forEach(o=>{
+const div=document.createElement("div");
+div.className="opinia";
+div.innerHTML=`
+<img src="${o.avatar}">
+<p>${o.text}</p>
+<strong>${o.name}</strong>
+`;
+slider.appendChild(div);
+});
+}
+
+loadOpinie();
